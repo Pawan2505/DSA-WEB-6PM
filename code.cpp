@@ -840,5 +840,546 @@
 // fun();
 // }
 
+// https://docs.google.com/document/d/12UzMEp_w0DqWyMAjm5ozko5NvQiWxe6Vm5lNbZoeuoc/edit?tab=t.0
 
-git init
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int a = 10;
+
+//     int *ptr1 = &a;
+
+//     int **ptr2  = &ptr1;
+//     cout<<&a<<endl;
+//     cout<<ptr1<<endl;
+//     cout<<*ptr2<<endl;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//    int *ptr = 10;  //Not OK
+
+//    cout<<*ptr<<endl;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//    int *ptr = new int;   //allocated memory
+
+//    *ptr = 10;
+
+//    cout<<*ptr<<endl;
+// }
+
+
+// Reference variable
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+// int a = 10;
+
+// int &ref = a;
+
+// cout<<"Value : "<<ref<<endl;
+// cout<<"Value a : "<<a<<endl;
+
+
+// cout<<&a<<endl;
+// cout<<&ref<<endl;
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// void fun(int &num){
+
+//     cout<<num<<endl;
+// }
+
+// int main(){
+// int a = 10;
+
+// fun(a);
+// }
+
+
+//  Pointr -> array
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int arr[5] = {12,2,34,56,7};
+
+//     int *ptr = arr;
+
+//     cout<<&arr[0]<<endl;
+//     cout<<&arr[1]<<endl;
+//     cout<<ptr<<endl;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     int arr[5] = {12,2,34,56,7};
+
+//     int *ptr = arr;
+
+//     cout<<*(ptr)<<endl;
+//     cout<<*(ptr+1)<<endl;
+//     cout<<*(ptr+2)<<endl;
+//     cout<<*(ptr+3)<<endl;
+//     cout<<*(ptr+4)<<endl;
+// }
+
+
+// https://docs.google.com/document/d/1Kq9ZoyhWSeNQPa5PBesevGWlB-chXS1ljLd3C5KKjf8/edit?tab=t.0
+
+// https://docs.google.com/document/d/1W0L7Fafkn-dUvm8HPruiocHzql456mWnEeXNxRoHMv0/edit?tab=t.0
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// void fun(int arr[]){
+//     for(int i = 0; i<5; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+// int main(){
+
+//     int arr[5] = {12,2,34,56,7};
+
+//     fun(arr);
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// void fun(int *ptr){
+//     for(int i = 0; i<5; i++){
+//         cout<<*(ptr+i)<<" ";
+//     }
+// }
+
+// int main(){
+
+//     int arr[5] = {12,2,34,56,7};
+
+//     fun(arr);
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// void fun(int *ptr){
+//     for(int i = 0; i<5; i++){
+//         cout<<*(ptr+i)<<" ";
+//     }
+// }
+
+// int main(){
+
+//     int arr[5] = {12,2,34,56,7};
+
+//     fun(arr);
+
+// }
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     // Original array
+//     int original[3] = {1, 2, 3};
+
+//     // Shallow copy: Copy the reference (address)
+//     int *shallowCopy = original;
+
+//     // Modify shallow copy
+//     shallowCopy[0] = 100;
+
+//     // Print original and shallowCopy
+//     cout << "Original Array: ";
+//     for (int i = 0; i < 3; i++) {
+//         cout << original[i] << " "; // The original array is affected
+//     }
+//     cout << endl;
+
+//     cout << "Shallow Copy: ";
+//     for (int i = 0; i < 3; i++) {
+//         cout << shallowCopy[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     // Original array
+//     int original[3] = {1, 2, 3};
+
+//     // Deep copy: Allocate new memory and copy data
+//     int deepCopy[3];
+
+//     for (int i = 0; i < 3; i++) {
+//         deepCopy[i] = original[i];
+//     }
+
+//     // Modify deepCopy
+//     deepCopy[0] = 100;
+
+//     // Print original and deepCopy
+//     cout << "Original Array: ";
+//     for (int i = 0; i < 3; i++) {
+//         cout << original[i] << " "; // The original array is unaffected
+//     }
+//     cout << endl;
+
+//     cout << "Deep Copy: ";
+//     for (int i = 0; i < 3; i++) {
+//         cout << deepCopy[i] << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+// https://docs.google.com/document/d/1W0L7Fafkn-dUvm8HPruiocHzql456mWnEeXNxRoHMv0/edit?tab=t.0
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+
+//     string str = "Pawan Maurya";
+
+//     cout<<str<<endl;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+    
+//     string str = "Pawan\0 Maurya";
+
+//     cout<<str<<endl;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+    
+//     string str = "Pawan Maurya";   // string is also character array;
+
+//     cout<<str<<endl;
+
+//     cout<<str[0]<<endl;
+
+// }
+
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str = " Pawan Maurya ";   // string is also character array;
+
+//     cout<<str<<endl;
+
+//     cout<<str[0]<<endl;
+
+//     cout<<str.size()<<endl;
+    
+// }
+
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str = " Pawan Maurya ";   // string is also character array;
+
+//     cout<<str<<endl;
+
+//     cout<<str[0]<<endl;
+
+//     cout<<str.size()<<endl;
+//     cout<<str.length()<<endl;
+    
+// }
+
+
+
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str = "Pawan Maurya";   // string is also character array;
+
+//     for(int i = 0; i<str.length(); i++){
+//         cout<<str[i]<<endl;
+//     }
+    
+// }
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str = "Pawan Maurya";   // string is also character array;
+
+//     for(int i = 0; i<str.length(); i++){
+//         cout<<str[i];
+//     }
+    
+// }
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str = "Pawan Maurya";   // string is also character array;
+
+//     for(int i = 0; i<str.length(); i++){
+//         cout<<str[i];
+//     }
+    
+// }
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str1 = "Pawan";
+//     string str2 = "Maurya";
+
+//     string s3 = str1 + " " + str2;
+
+//     cout<<s3<<endl;
+    
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str1 = "Pawan";
+//     string str2 = " Maurya";
+
+//     cout<<str1.append(str2)<<endl;
+    
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//     string str1 = "Pawan";
+//     string str2 = " Maurya";
+
+//     // strcat(str1+str2);  // not working 
+
+//     cout<<str1<<endl;
+    
+// }
+// #include<iostream>
+// #include<string>
+// #include <cstring> 
+// using namespace std;
+
+// int main(){
+    
+//     char str1[15] = "Pawan";
+//     char str2[8] = " Maurya";
+
+//     strcat(str1,str2);  
+
+//     cout<<str1<<endl;
+    
+// }
+
+
+// #include<iostream>
+// #include<string>
+// #include <cstring> 
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+//  cout<<str.find("w");
+    
+// }
+
+// #include<iostream>
+// #include<string>
+// #include <cstring> 
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+//  cout<<str.at(2);
+    
+// }
+// #include<iostream>
+// #include<string>
+// #include <cstring> 
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+//  cout<<str.at(2);
+    
+// }
+
+
+// #include<iostream>
+// #include<string>
+// #include <cstring> 
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+// cout<<str.empty()<<endl;
+
+// if(!(str.empty())){
+//     cout<<"String is not Empty!"<<endl;
+// }
+    
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+//  str.clear();
+
+// cout<<str.empty()<<endl;
+
+    
+// }
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+// cout<<str.insert(3,"Hello")<<endl;
+   
+// }
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+// cout<<str.erase(2,1)<<endl;
+   
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan";
+
+// cout<<str.erase(2,2)<<endl;
+   
+// }
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+//  string str = "Pawan" + to_string(123);
+
+// cout<<str<<endl;
+   
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// int main(){
+    
+// string s1 = "123";
+
+// int sum = 100 + stoi(s1);
+// cout<<sum<<endl;
+
+   
+// }
