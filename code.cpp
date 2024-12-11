@@ -1383,3 +1383,155 @@
 
    
 // }
+
+
+// #include<iostream>
+// using namespace std;
+
+// // Create class
+
+// class Person{
+
+// }
+
+// int main(){
+// Person p1;  // create object 
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Person{
+
+//     public :
+//     // Data member
+//     string name;
+//     int age;
+//     int salary;
+
+
+//     public : 
+//     // Member function
+
+//     void displayDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Salary : "<<salary<<endl;
+//     }
+
+// };
+
+// int main(){
+// Person poojan;  // create object 
+
+// poojan.name = "Poojan";
+// poojan.age = 20;
+// poojan.salary = 900000;
+
+// poojan.displayDetails();
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Person{
+
+//     private :
+//     // Data member
+//     string name;
+//     int age;
+//     int salary;
+
+
+//     public : 
+//     // Member function
+
+//     void setDetails(string name, int age, int salary){
+
+//         this->name = name;
+//         this->age = age;
+//         this->salary = salary;
+
+//     }
+
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Salary : "<<salary<<endl;
+//     }
+
+// };
+
+// int main(){
+// Person poojan;  // create object  => non static data member unko memory.
+// poojan.setDetails("Poojan Shirvastav",20,900000);
+
+// poojan.getDetails();
+
+// cout<<"\n Size of Class : "<<sizeof(Person)<<endl;
+
+
+// }
+
+
+#include<iostream>
+using namespace std;
+
+class Person{
+
+    private :
+    // Data member
+    string name;
+    int age;
+    int salary;
+
+     public : 
+
+     Person(){
+        name = "xyz";
+        age = 100;
+        salary = 0;
+     }
+     
+
+     Person(string name, int age, int salary){
+        this->name = name;
+        this->age = age;
+        this->salary = salary;
+     }
+
+
+    void getDetails(){
+        cout<<"Name : "<<name<<endl;
+        cout<<"Age : "<<age<<endl;
+        cout<<"Salary : "<<salary<<endl;
+    }
+
+};
+
+int main(){
+Person poojan("Poojan Shirvastav",20,900000);  // create object  => non static data member ko memory milti hai. aur jab ham object banate hai us time   constructor call hota hai
+Person poojan1("Poojan1 Shirvastav",11,900000);  // create object  => non static data member ko memory milti hai. aur jab ham object banate hai us time   constructor call hota hai
+Person poojan2("Poojan2 Shirvastav",22,900000);  // create object  => non static data member ko memory milti hai. aur jab ham object banate hai us time   constructor call hota hai
+Person poojan3("Poojan3 Shirvastav",9,900000);  // create object  => non static data member ko memory milti hai. aur jab ham object banate hai us time   constructor call hota hai
+Person poojan4("Poojan3 Shirvastav",69,900000);  // create object  => non static data member ko memory milti hai. aur jab ham object banate hai us time   constructor call hota hai
+poojan.getDetails();
+poojan1.getDetails();
+poojan2.getDetails();
+poojan3.getDetails();
+poojan4.getDetails();
+
+
+Person p;
+p.getDetails();
+cout<<"\n Size of Class : "<<sizeof(Person)<<endl;
+
+
+}
+
+
+// https://docs.google.com/document/d/1zGlyazKn16JqkH2AOGI_FM3XDU3zYIseb4P69aOxguU/edit?tab=t.0
