@@ -1692,38 +1692,208 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     private:
+//     string name;
+//     int age;
+//     int marks;
+//     static int phone;
+
+//     public :
+
+//  Student(string name, int age, int marks){
+//     this->name = name;
+//     this->age = age;
+//     this->marks = marks;
+//   }
+
+//     void getDetails(){
+//         cout<<"Name : "<<this->name<<endl;
+//         cout<<"Age : "<<this->age<<endl;
+//         cout<<"Marks : "<<this->marks<<endl;
+//     }
+    
+// };
+
+// int main(){
+
+//     Student s[2] = { Student("Pawan", 24, 100), Student("Poojan", 24, 100) };;
+   
+//    s[0].getDetails();
+//    s[1].getDetails();
+
+//     cout<<"Size of class : "<<sizeof(Student)<<endl;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public :
+//     static string name;  // class level variable
+//     int age; // instance variable
+//     int marks; // instance variable
+
+
+//     Student(int age, int marks){
+//         this->age = age;
+//         this->marks = marks;
+//     }
+
+//     void display(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// string Student::name = "Pawan";
+
+// int main(){
+
+//     Student s1(24,100);
+//     Student s2(20,90);
+
+//     s1.display();
+//     s2.display();
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public :
+//     static string name;  // class level variable
+//     int age; // instance variable
+//     int marks; // instance variable
+
+//     Student(){
+//         cout<<"Achha Ey hota hai parameter less constructor call jab ham object k sath ko argument nhi bhejte hai"<<endl;;
+//     }
+
+// //Parametrized constructor
+//     Student(int age, int marks){
+//         this->age = age;
+//         this->marks = marks;
+//     }
+
+//    static void display(){
+//         cout<<"Name : "<<name<<endl;
+    
+//     }
+//     void display1(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// string Student::name = "Pawan";
+
+// int main(){
+
+//     Student s1(24,100);
+//     Student s2(20,90);
+
+
+//     s1.display1();
+//     s2.display1();
+
+//     Student::display();
+
+//     cout<<"Size of class : "<<sizeof(Student)<<endl;
+
+
+    
+//     Student s3;  // parameterless constructor ko call krega
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//     public : 
+//     string name;
+//     int age;
+//     int marks;
+//     string gender;
+
+//     public :
+
+
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//         cout<<"Gender : "<<gender<<endl;
+//     }
+
+// };
+
+// int main(){
+//     Student s1;
+
+//     s1.name = "Pawan";
+//     s1.age = 24;
+//     s1.marks = 100;
+//     s1.gender = "Male";
+
+
+//     s1.getDetails();
+// }
+
+
 #include<iostream>
 using namespace std;
 
 class Student{
-    private:
+
+    private : 
     string name;
     int age;
     int marks;
-    static int phone;
+    string gender;
 
     public :
 
- Student(string name, int age, int marks){
-    this->name = name;
-    this->age = age;
-    this->marks = marks;
-  }
+// setter method -> insilization
+
+    void setDetails(string name, int age, int marks, string gender){
+
+        // this-> => current insistance 
+
+        this->name = name;
+        this->age = age;
+        this->marks = marks;
+        this->gender = gender;
+    }
+
+// getter method -> access
 
     void getDetails(){
-        cout<<"Name : "<<this->name<<endl;
-        cout<<"Age : "<<this->age<<endl;
-        cout<<"Marks : "<<this->marks<<endl;
+        cout<<"Name : "<<name<<endl;
+        cout<<"Age : "<<age<<endl;
+        cout<<"Marks : "<<marks<<endl;
+        cout<<"Gender : "<<gender<<endl;
     }
-    
+
 };
 
 int main(){
-
-    Student s[2] = { Student("Pawan", 24, 100), Student("Poojan", 24, 100) };;
-   
-   s[0].getDetails();
-   s[1].getDetails();
-
-    cout<<"Size of class : "<<sizeof(Student)<<endl;
+    Student s1;
+    s1.setDetails("Pawan",24,100,"Male");
+    s1.getDetails();
+    Student s2;
+    s2.setDetails("BCA",24,100,"Other");
+    s2.getDetails();
 }
