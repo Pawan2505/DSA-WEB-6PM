@@ -1853,47 +1853,207 @@
 // }
 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class Student{
+// class Student{
 
-    private : 
-    string name;
-    int age;
-    int marks;
-    string gender;
+//     private : 
+//     string name;
+//     int age;
+//     int marks;
+//     string gender;
 
-    public :
+//     public :
 
-// setter method -> insilization
+// // setter method -> insilization
 
-    void setDetails(string name, int age, int marks, string gender){
+//     void setDetails(string name, int age, int marks, string gender){
 
-        // this-> => current insistance 
+//         // this-> => current insistance 
 
-        this->name = name;
-        this->age = age;
-        this->marks = marks;
-        this->gender = gender;
-    }
+//         this->name = name;
+//         this->age = age;
+//         this->marks = marks;
+//         this->gender = gender;
+//     }
 
-// getter method -> access
+// // getter method -> access
 
-    void getDetails(){
-        cout<<"Name : "<<name<<endl;
-        cout<<"Age : "<<age<<endl;
-        cout<<"Marks : "<<marks<<endl;
-        cout<<"Gender : "<<gender<<endl;
-    }
+//     void getDetails(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//         cout<<"Gender : "<<gender<<endl;
+//     }
 
-};
+// };
 
-int main(){
-    Student s1;
-    s1.setDetails("Pawan",24,100,"Male");
-    s1.getDetails();
-    Student s2;
-    s2.setDetails("BCA",24,100,"Other");
-    s2.getDetails();
-}
+// int main(){
+//     Student s1;
+//     s1.setDetails("Pawan",24,100,"Male");
+//     s1.getDetails();
+//     Student s2;
+//     s2.setDetails("BCA",24,100,"Other");
+//     s2.getDetails();
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public :
+
+//     Student(){
+//         cout<<"Constructor called..."<<endl;;
+//     }
+
+//     ~Student(){
+//         cout<<"Destructor Called.."<<endl;;
+//     }
+// };
+
+// int main(){
+
+//     Student s1;
+//     Student s2;
+
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     int *ptr;
+
+
+//     public :
+
+//     Student(int p){
+
+//         ptr = new int;
+//         *ptr = p;
+//     }
+
+//     ~Student(){
+//         cout<<"Destructor Called.."<<endl;
+//         delete ptr;
+       
+//     }
+
+//     void display(){
+//          cout<<"*Ptr store value :  "<<*ptr<<endl;
+//         cout<<"Ptr store address : "<<ptr<<endl;
+//     }
+// };
+
+// int main(){
+
+//     Student s1(10);
+//    s1.display();
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     int *arr;
+
+
+//     public :
+
+//     Student(int p[]){
+
+//         arr = new int[5];
+
+//        for (int i = 0; i < 5; i++)
+//         { 
+//             arr[i] = p[i];
+//         }
+//     }
+
+//     ~Student(){
+//         cout<<"\nDestructor Called.."<<endl;
+//         delete[] arr;
+       
+//     }
+
+//     void display(){
+        
+//         for(int i = 0; i < 5; i++){
+//             cout<<arr[i]<<" ";
+//         }
+//         cout<<endl;
+//     }
+// };
+
+// int main(){
+//    int p [] = {10,20,30,40,50};
+//     Student s1(p);
+//    s1.display();
+
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     int *arr;
+
+
+//     public :
+
+//     Student(int p[]){
+
+//         arr = new int[5];
+
+//        for (int i = 0; i < 5; i++)
+//         { 
+//             arr[i] = p[i];
+//         }
+//     }
+
+//     ~Student(){
+//         cout<<"\nDestructor Called.."<<endl;
+//         delete[] arr;
+       
+//     }
+
+//     void display(){
+        
+//         for(int i = 0; i < 5; i++){
+//             cout<<arr[i]<<" ";
+//         }
+//         cout<<endl;
+//     }
+// };
+
+// int main(){
+//    int p [] = {10,20,30,40,50};
+//     Student *s1 = new Student(p);
+//       s1->display();
+
+//     delete s1;
+// }
+
+
+
+
