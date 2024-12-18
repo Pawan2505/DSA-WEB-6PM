@@ -2057,3 +2057,642 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int a = 10;
+
+//     int *ptr = &a;
+
+//     cout<<a<<endl;
+//     cout<<*ptr<<endl;
+
+
+//     cout<<&a<<endl;
+//     cout<<ptr<<endl;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int main(){
+//     int a = 10;
+
+//     int *ptr = &a;
+
+//     cout<<a<<endl;
+//     cout<<*ptr<<endl;
+
+
+//     cout<<&a<<endl;
+//     cout<<ptr<<endl;
+// }
+
+// Copy constructor
+// 1. Shallow Copy constructor
+// 2. Deep Cop Constructor
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public :
+//     string name;
+//     int age;
+
+// // parameterless constructor
+//     Student(){
+//         name = "Pawan";
+//         age = 24;
+//     }
+
+// // parameterised Constructor
+//     Student(string name, int age){
+//         this->name = name;
+//         this->age = age;
+//     }
+
+// // Copy constructor
+
+//     Student(Student &other){
+//         this->name = other.name;
+//         this->age = other.age;
+//     }
+
+//     void display(){
+//         cout<<"Name : "<<name<<endl;
+//         cout<<"Age : "<<age<<endl;
+//     }
+// };
+
+
+// int main(){
+//     Student s1;   // parameterless constructor call
+
+//     s1.display();
+
+//     Student s2("Poojan",20);  // parameterised Constructor
+
+//     s2.display();
+
+//     Student s3 = s2;  // copy constructor => shallow Copy constructor
+
+//     s3.display();
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public :
+//         int marks;
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:public Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     n1.marks = 20;
+
+    
+
+//     n1.display();
+//     n1.Student::display();
+    
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:public Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//      cout<<"Access in main : "<<n1.marks<<endl;
+
+//     n1.display();
+//     n1.Student::display();
+    
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:private Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//      cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     //  cout<<"Access in main : "<<n1.marks<<endl; // Not ok
+
+//     n1.display();
+//     // n1.Student::display();   // Not Okey
+    
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     protected :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:public Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//      cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     //  cout<<"Access in main : "<<n1.marks<<endl; // Not ok
+
+//     n1.display();
+//     // n1.Student::display();   // Not Okey
+    
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     protected :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:private Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//      cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     //  cout<<"Access in main : "<<n1.marks<<endl; // Not ok
+
+//     n1.display();
+//     // n1.Student::display();   // Not Okey
+    
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     protected :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:private Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//      cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     //  cout<<"Access in main : "<<n1.marks<<endl; // Not ok
+
+//     n1.display();
+//     // n1.Student::display();   // Not Okey
+    
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     private :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:public Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//      cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     //  cout<<"Access in main : "<<n1.marks<<endl; // Not ok
+
+//     n1.display();
+//     // n1.Student::display();   // Not Okey
+    
+// }
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     private :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:protected Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//      cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     //  cout<<"Access in main : "<<n1.marks<<endl; // Not ok
+
+//     n1.display();
+//     // n1.Student::display();   // Not Okey
+    
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     private :
+//         int marks;
+
+
+//     Student(){
+//         marks = 50;
+//     }
+
+
+//     void display(){
+//         cout<<"Student Class!"<<endl;
+//         cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// class Nishit:private Student{
+//     public :
+
+//     void display(){
+//     cout<<"Child Class!"<<endl;
+//      cout<<"Marks : "<<marks<<endl;
+//     }
+// };
+
+// int main(){
+//     Nishit n1;
+
+//     //  cout<<"Access in main : "<<n1.marks<<endl; // Not ok
+
+//     n1.display();
+//     // n1.Student::display();   // Not Okey
+    
+// }
+
+// Inheritance : Single/simple inheritance
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public :
+        
+//         void display1(){
+//             cout<<"Class A"<<endl;
+//         }
+// };
+
+// class B : public A{
+//     public :
+
+//     void display2(){
+//         cout<<"Class B"<<endl;
+//     }
+    
+// };
+
+// int main(){
+
+//    B b;
+
+//    b.display1();
+//    b.display2(); 
+
+// }
+
+
+// Multilevel Inheritance
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public :
+        
+//         void display1(){
+//             cout<<"Class A"<<endl;
+//         }
+// };
+
+// class B : public A{
+//     public :
+
+//     void display2(){
+//         cout<<"Class B"<<endl;
+//     }
+    
+// };
+// class C : public B{
+//     public :
+
+//     void display3(){
+//         cout<<"Class C"<<endl;
+//     }
+    
+// };
+
+// int main(){
+
+//    C c;
+
+//    c.display1();
+//    c.display2(); 
+//    c.display3(); 
+
+// }
+
+// Multiple Inheritance
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public :
+        
+//         void display1(){
+//             cout<<"Class A"<<endl;
+//         }
+// };
+
+// class B {
+//     public :
+
+//     void display2(){
+//         cout<<"Class B"<<endl;
+//     }
+    
+// };
+// class C :public A, public B{
+//     public :
+
+//     void display3(){
+//         cout<<"Class C"<<endl;
+//     }
+    
+// };
+
+// int main(){
+
+//    C c;
+
+//    c.display1();
+//    c.display2(); 
+//    c.display3(); 
+
+// }
+
+
+
+// Hierarchical inheritance
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public :
+        
+//         void display1(){
+//             cout<<"Class A"<<endl;
+//         }
+// };
+
+// class B: public A {
+//     public :
+
+//     void display2(){
+//         cout<<"Class B"<<endl;
+//     }
+    
+// };
+// class C :public A{
+//     public :
+
+//     void display3(){
+//         cout<<"Class C"<<endl;
+//     }
+    
+// };
+
+// int main(){
+
+//    C c;
+
+//    c.display1();
+// //    c.display2(); 
+
+//     B b;
+//    b.display1(); 
+
+// }
+
+#include<iostream>
+using namespace std;
+
+class A{
+    public :
+        
+        void display1(){
+            cout<<"Class A"<<endl;
+        }
+};
+
+class B:virtual public A {
+    public :
+
+    void display2(){
+        cout<<"Class B"<<endl;
+    }
+    
+};
+class C :virtual public A{
+    public :
+
+    void display3(){
+        cout<<"Class C"<<endl;
+    }
+    
+};
+class D :public B, public C{
+    public :
+
+    void display4(){
+        cout<<"Class C"<<endl;
+    }
+    
+};
+
+int main(){
+
+    D d;
+
+    d.display1();
+   
+}
+
+
+
+// Topic : https://docs.google.com/document/d/1AKXjMAy5thNfqEioBmuocluC2UqlaPsJGbY7Riyj2to/edit?tab=t.0
