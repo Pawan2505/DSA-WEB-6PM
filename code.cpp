@@ -2649,50 +2649,442 @@
 
 // }
 
-#include<iostream>
-using namespace std;
 
-class A{
-    public :
+
+// #include<iostream>
+// using namespace std;
+
+// class A{
+//     public :
         
-        void display1(){
-            cout<<"Class A"<<endl;
-        }
-};
+//         void display1(){
+//             cout<<"Class A"<<endl;
+//         }
+// };
 
-class B:virtual public A {
-    public :
+// class B:virtual public A {
+//     public :
 
-    void display2(){
-        cout<<"Class B"<<endl;
-    }
+//     void display2(){
+//         cout<<"Class B"<<endl;
+//     }
     
-};
-class C :virtual public A{
-    public :
+// };
+// class C :virtual public A{
+//     public :
 
-    void display3(){
-        cout<<"Class C"<<endl;
-    }
+//     void display3(){
+//         cout<<"Class C"<<endl;
+//     }
     
-};
-class D :public B, public C{
-    public :
+// };
+// class D :public B, public C{
+//     public :
 
-    void display4(){
-        cout<<"Class C"<<endl;
-    }
+//     void display4(){
+//         cout<<"Class C"<<endl;
+//     }
     
-};
+// };
 
-int main(){
+// int main(){
 
-    D d;
+//     D d;
 
-    d.display1();
+//     d.display1();
    
-}
+// }
 
 
 
 // Topic : https://docs.google.com/document/d/1AKXjMAy5thNfqEioBmuocluC2UqlaPsJGbY7Riyj2to/edit?tab=t.0
+
+
+// Polymorphism : compiletime polymorphism : overloading
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//     public : 
+//     int num1,num2,n1,n2,n3;
+//     float num01,num02,num03;
+
+//     public : 
+
+//     int display(int num1, int num2){
+
+//         this->num1 = num1;
+//         this->num2 = num2;
+
+//         cout<<"Sum two number : "<<num1+num2<<endl;
+//     }
+//     int display(int n1, int n2, int n3){
+//         this->n1 = n1;
+//         this->n2 = n2;
+//         this->n3 = n3;
+//         cout<<"Sum three number : "<<n1+n2+n3<<endl;
+//     }
+//     float display(float num01, float num02, float num03){
+//         this->num01 = num01;
+//         this->num02 = num02;
+//         this->num03 = num03;
+//         cout<<"Sum three number : "<<num01+num02+num03<<endl;
+//     }
+// };
+
+// int main(){
+
+//     Student s1;
+//     s1.display(12,34);
+
+//     Student s2;
+//     s2.display(12.4f,56.9f,78.9f);
+
+//     Student s3;
+
+//     s3.display(12,334,56);
+
+// }
+
+
+// Runtime polymorphism
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+
+//     public :
+
+//     int num1;
+//     int num2;
+
+//     public :
+
+//        virtual int display(int num1, int num2){
+
+//         this->num1 = num1;
+//         this->num2 = num2;
+
+//         cout<<"Sum two number : "<<num1+num2<<endl;
+//     }
+
+// };
+
+// class Nishit : public Student{
+
+//     public : 
+
+//    int display(int num1, int num2)override{
+
+//         this->num1 = num1;
+//         this->num2 = num2;
+
+//         cout<<"Sum two number : "<<num1+num2<<endl;
+//     }
+// };
+
+// int main(){
+
+//     Nishit ns;
+
+//     ns.display(10,20);
+//     ns.Student::display(100,20);
+
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Student{
+//     public : 
+
+//     virtual void display() = 0;
+
+//     void print(){
+//         cout<<"Student Class ... "<<endl;
+//     }
+// };
+
+// class Poojan : public Student{
+
+//     public : 
+
+//     void display(){
+//         cout<<"Poojan Class .."<<endl;
+//     }
+// };
+
+// int main(){
+//    Poojan pj;
+
+//    pj.print();
+
+//    pj.display();
+// }
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+//   template<typename T>
+
+//   T addition(T x, T y){
+
+//     T result = x + y;
+
+//     cout<<result<<endl;
+//   }
+
+// int main(){
+
+//    addition(10, 20);
+// }
+
+// #include<iostream>
+// using namespace std;
+
+//   template<typename T>
+
+//   T addition(T x, T y){
+
+//     T result = x + y;
+
+//     cout<<result<<endl;
+//   }
+
+// int main(){
+
+//    addition(10.5, 20.6);
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+//   template<typename T1, typename T2>
+
+//   T1 addition(T1 x, T2 y){
+
+//     T1 result = x + y;
+
+//     cout<<result<<endl;
+//   }
+
+// int main(){
+
+//    addition(10.5, 20);
+// }
+
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// template<typename T>
+// T addition(T x, T y) {
+//     T result = x + " "+ y;
+//     cout << result << endl;
+// }
+
+// int main() {
+//     addition<string>("Pawan", "Maurya");
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// template<typename T, typename T1>
+
+// class Student{
+//     public :
+//     T age;
+//     T1 name;
+
+//     Student(T age, T1 name){
+//         this->age = age;
+//         this->name = name;
+//     }
+
+//     T display(){
+//         cout<<"Age : "<<age<<endl;
+//         cout<<"Name : "<<name<<endl;
+//     }
+// };
+
+// int main(){
+
+//     Student <int,string> s1(10,"Poojan");
+
+//     s1.display();
+// }
+
+
+
+
+//STL :  Vector
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main(){
+
+//     vector<int>v1;
+
+//     cout<<"Data Push in vector : "<<endl;
+
+//     v1.push_back(10);
+//     v1.push_back(20);
+//     v1.push_back(30);
+//     v1.push_back(40);
+//     v1.push_back(50);
+
+// cout<<"Size of vector : "<<v1.size()<<endl;
+
+// cout<<"Last data in vector : "<<v1.back()<<endl;
+
+// v1.pop_back();
+
+// cout<<"After pooped data from vector ,Last data in vector : "<<v1.back()<<endl;
+
+// cout<<"Size of vector : "<<v1.size()<<endl;
+
+
+// cout<<"Vector empty or not : "<<v1.empty()<<endl;
+
+// cout<<"Front data in vector : "<<v1.front()<<endl;
+
+// // insert data at position
+
+// cout<<"Insert data in vector : "<<endl;
+
+// v1.insert(v1.begin() + 3, 300);
+
+// // Display
+
+// for(int i = 0; i < v1.size(); i++){
+//     cout<<v1[i]<<" ";
+// }
+
+// cout<<endl;
+
+// // erase()
+
+// v1.erase(v1.begin() + 3);
+
+// for(int i = 0; i < v1.size(); i++){
+//     cout<<v1[i]<<" ";
+// }
+
+// cout<<endl;
+
+// cout<<"Data present at index of vector : "<<v1.at(2)<<endl;
+
+// cout<<"End data using pointer method : "<<*(v1.end() - 1)<<endl;
+
+// v1.clear();
+
+// for(int i = 0; i < v1.size(); i++){
+//     cout<<v1[i]<<" ";
+// }
+
+// cout<<endl;
+// }
+
+// HW : https://docs.google.com/document/d/1MiNz-8zwI8m3Tq1YeK-SPWYVEPqq4yxaNU1z9FkMHmg/edit?tab=t.0
+// https://docs.google.com/document/d/1UcJAPlyAvmXJNtmg6FGzgmBSRbZTiNRg0EzUdPwB8hM/edit?tab=t.0
+
+// https://docs.google.com/document/d/1DVeU0VBbBpL_B0WHFTYijqmvFMzU9H4ZR8UQFo_uaWM/edit?tab=t.0
+
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> v1{10,20,30,40,50};
+
+//     for(int i = 0; i < v1.size(); i++){
+//         cout<<v1[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> v1(5,50);
+
+//     // v1.push_back(10);
+//     // v1.push_back(20);
+//     // v1.push_back(30);
+//     // v1.push_back(40);
+//     // v1.push_back(50);
+
+//     cout<<"Size of vector : "<<v1.size()<<endl;
+
+//     for(int i = 0; i < v1.size(); i++){
+//         cout<<v1[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int main(){
+//     vector<int> v1(5);
+
+  
+//     for(int i = 0; i < v1.size(); i++){
+//         cout<<"Enter Data : ";
+//         cin>>v1[i];
+//     }
+
+//     cout<<"Size of vector : "<<v1.size()<<endl;
+
+//     for(int i = 0; i < v1.size(); i++){
+//         cout<<v1[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+
+// Vector:
+
+// Memory: Uses contiguous memory.
+
+// Access Time: O(1) time complexity for access because of direct indexing.
+
+// Insertion/Deletion: O(n) time complexity for insertion/deletion (except at the end).
+
+// Cache Friendliness: Better cache performance due to contiguous memory.
+
+// Size Management: Often requires resizing which can be costly.
+
+// Linked List:
+
+// Memory: Uses non-contiguous memory.
+
+// Access Time: O(n) time complexity for access due to sequential traversal.
+
+// Insertion/Deletion: O(1) time complexity for insertion/deletion (if you have a reference to the node).
+
+// Cache Friendliness: Poorer cache performance due to scattered memory.
+
+// Size Management: No need for resizing.
+
