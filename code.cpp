@@ -3092,66 +3092,215 @@
 
 // Linked list : 1> insert at tail
 
-#include<iostream>
-using namespace std;
 
-class Node{
-    public :
-    int data;
-    Node *next;
+// #include<iostream>
+// using namespace std;
 
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
-    }
-};
+// class Node{
+//     public :
+//     int data;
+//     Node *next;
 
-void insertAtTail(Node* &head, int data){
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
 
-    Node *newNode = new Node(data);
+// void insertAtTail(Node* &head, int data){
 
-    if(head == NULL){
-        head = newNode;
-        return;
-    }
+//     Node *newNode = new Node(data);
 
-    Node* temp = head;
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
 
-    while(temp->next != NULL){
-        temp = temp->next;
-    } 
+//     Node* temp = head;
 
-    temp->next = newNode;
+//     while(temp->next != NULL){
+//         temp = temp->next;
+//     } 
 
-}
+//     temp->next = newNode;
 
-
-void display(Node* &head){
-
-    if(head == NULL){
-        cout<<"Linked List Empty!"<<endl;
-    }
-
-    Node *temp = head;
-
-    while(temp != NULL){
-        cout<<temp->data<<"->";
-        temp = temp->next;
-    } 
-
-    cout<<"NULL"<<endl;
-}
+// }
 
 
-int main(){
-    Node *head = NULL;
+// void display(Node* &head){
 
-    insertAtTail(head,10);
-    insertAtTail(head,20);
-    insertAtTail(head,30);
-    insertAtTail(head,40);
-    insertAtTail(head,50);
-    insertAtTail(head,60);
+//     if(head == NULL){
+//         cout<<"Linked List Empty!"<<endl;
+//     }
 
-    display(head);
-}
+//     Node *temp = head;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     } 
+
+//     cout<<"NULL"<<endl;
+// }
+
+
+// int main(){
+//     Node *head = NULL;
+
+//     insertAtTail(head,10);
+//     insertAtTail(head,20);
+//     insertAtTail(head,30);
+//     insertAtTail(head,40);
+//     insertAtTail(head,50);
+//     insertAtTail(head,60);
+
+//     display(head);
+// }
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public :
+//     int data;
+//     Node *next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void insertAtHead(Node* &head, int data){
+//     Node *newNode = new Node(data);
+
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+
+// void display(Node* &head){
+//     if(head == NULL){
+//         cout<<"Linked List is Empty!"<<endl;
+//         return;
+//     }
+
+// Node* temp = head;
+
+// while(temp != NULL){
+//     cout<<temp->data<<"->";
+//     temp = temp->next;
+// }
+
+// cout<<"NULL"<<endl;
+
+// }
+
+// int main(){
+//     Node* head = NULL;
+
+//     insertAtHead(head, 10);
+//     insertAtHead(head, 20);
+//     insertAtHead(head, 30);
+//     insertAtHead(head, 40);
+//     insertAtHead(head, 50);
+//     insertAtHead(head, 60);
+
+//     display(head);
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public :
+//     int data;
+//     Node *next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void insertAtHead(Node* &head, int data){
+//     Node *newNode = new Node(data);
+
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
+
+//     newNode->next = head;
+//     head = newNode;
+// }
+
+// // insert Node at specific Position
+
+// void insertAtPosition(Node* &head, int position, int data){
+//     Node *newNode = new Node(data);
+
+//     if(position == 1){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
+
+//     Node* temp = head;
+
+//     for(int i = 1; i < position-1 && temp != NULL; i++){
+//         temp = temp->next;
+//     }
+
+//     if(temp == NULL){
+//         cout<<"Positon out bound!"<<endl;
+//         return;
+//     }
+
+//     newNode->next = temp->next;
+//     temp->next = newNode;
+// }
+
+
+// void display(Node* &head){
+//     if(head == NULL){
+//         cout<<"Linked List is Empty!"<<endl;
+//         return;
+//     }
+
+// Node* temp = head;
+
+// while(temp != NULL){
+//     cout<<temp->data<<"->";
+//     temp = temp->next;
+// }
+
+// cout<<"NULL"<<endl;
+
+// }
+
+// int main(){
+//     Node* head = NULL;
+
+//     insertAtHead(head, 10);
+//     insertAtHead(head, 20);
+//     insertAtHead(head, 30);
+//     insertAtHead(head, 40);
+//     insertAtHead(head, 50);
+//     insertAtHead(head, 60);
+
+//     display(head);
+
+    
+//     insertAtPosition(head,3, 100);
+
+//      display(head);
+// }
