@@ -3429,157 +3429,203 @@
 
 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
-class Node{
-    public :
-    int data;
-    Node *next;
+// class Node{
+//     public :
+//     int data;
+//     Node *next;
 
-    Node(int data){
-        this->data = data;
-        this->next = NULL;
-    }
-};
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
 
-void insertAtHead(Node* &head, int data){
-    Node *newNode = new Node(data);
+// void insertAtHead(Node* &head, int data){
+//     Node *newNode = new Node(data);
 
-    if(head == NULL){
-        head = newNode;
-        return;
-    }
+//     if(head == NULL){
+//         head = newNode;
+//         return;
+//     }
 
-    newNode->next = head;
-    head = newNode;
-}
+//     newNode->next = head;
+//     head = newNode;
+// }
 
-// insert Node at specific Position
+// // insert Node at specific Position
 
-void insertAtPosition(Node* &head, int position, int data){
-    Node *newNode = new Node(data);
+// void insertAtPosition(Node* &head, int position, int data){
+//     Node *newNode = new Node(data);
 
-    if(position == 1){
-        newNode->next = head;
-        head = newNode;
-        return;
-    }
+//     if(position == 1){
+//         newNode->next = head;
+//         head = newNode;
+//         return;
+//     }
 
-    Node* temp = head;
+//     Node* temp = head;
 
-    for(int i = 1; i < position-1 && temp != NULL; i++){
-        temp = temp->next;
-    }
+//     for(int i = 1; i < position-1 && temp != NULL; i++){
+//         temp = temp->next;
+//     }
 
-    if(temp == NULL){
-        cout<<"Positon out bound!"<<endl;
-        return;
-    }
+//     if(temp == NULL){
+//         cout<<"Positon out bound!"<<endl;
+//         return;
+//     }
 
-    newNode->next = temp->next;
-    temp->next = newNode;
-}
+//     newNode->next = temp->next;
+//     temp->next = newNode;
+// }
 
 
-// Update Node
+// // Update Node
 
-void updateNode(Node* &head, int oldData, int newData){
-    if(head == NULL){
-        cout<<"Linked List Empty!"<<endl;
-        return;
-    }
+// void updateNode(Node* &head, int oldData, int newData){
+//     if(head == NULL){
+//         cout<<"Linked List Empty!"<<endl;
+//         return;
+//     }
 
-    Node* temp = head;
+//     Node* temp = head;
 
-    while(temp != NULL){
-        if(temp->data == oldData){
-            temp->data = newData;
-            return;
-        }
+//     while(temp != NULL){
+//         if(temp->data == oldData){
+//             temp->data = newData;
+//             return;
+//         }
 
-        temp = temp->next;
-    }
+//         temp = temp->next;
+//     }
 
-    cout<<"Node does Not Exist!"<<endl;
-}
+//     cout<<"Node does Not Exist!"<<endl;
+// }
 
-void deleteNode(Node* &head, int deleteData){
-    if(head == NULL){
-        cout << "Linked List Underflow!" << endl;
-        return;
-    }
+// void deleteNode(Node* &head, int deleteData){
+//     if(head == NULL){
+//         cout << "Linked List Underflow!" << endl;
+//         return;
+//     }
 
-    Node* temp = head;
-    Node* prev = NULL;
+//     Node* temp = head;
+//     Node* prev = NULL;
 
-    while(temp != NULL){
-        if(temp->data == deleteData){
+//     while(temp != NULL){
+//         if(temp->data == deleteData){
 
-            if(prev == NULL){
-                head = temp->next;
-            }
+//             if(prev == NULL){
+//                 head = temp->next;
+//             }
 
-            else{
-                  prev->next = temp->next;
-                    delete temp;
-                     return; 
-            }
+//             else{
+//                   prev->next = temp->next;
+//                     delete temp;
+//                      return; 
+//             }
               
-        }
-        prev = temp;
-        temp = temp->next;
-    }
+//         }
+//         prev = temp;
+//         temp = temp->next;
+//     }
 
-    cout << "Node with data " << deleteData << " not found!" << endl;
-}
+//     cout << "Node with data " << deleteData << " not found!" << endl;
+// }
 
 
 
-void display(Node* &head){
-    if(head == NULL){
-        cout<<"Linked List is Empty!"<<endl;
-        return;
-    }
+// void display(Node* &head){
+//     if(head == NULL){
+//         cout<<"Linked List is Empty!"<<endl;
+//         return;
+//     }
 
-Node* temp = head;
+// Node* temp = head;
 
-while(temp != NULL){
-    cout<<temp->data<<"->";
-    temp = temp->next;
-}
+// while(temp != NULL){
+//     cout<<temp->data<<"->";
+//     temp = temp->next;
+// }
 
-cout<<"NULL"<<endl;
+// cout<<"NULL"<<endl;
 
-}
+// }
 
-int main(){
-    Node* head = NULL;
+// int main(){
+//     Node* head = NULL;
 
-    insertAtHead(head, 10);
-    insertAtHead(head, 20);
-    insertAtHead(head, 30);
-    insertAtHead(head, 40);
-    insertAtHead(head, 50);
-    insertAtHead(head, 50);
+//     insertAtHead(head, 10);
+//     insertAtHead(head, 20);
+//     insertAtHead(head, 30);
+//     insertAtHead(head, 40);
+//     insertAtHead(head, 50);
+//     insertAtHead(head, 50);
 
-    display(head);
+//     display(head);
 
     
-    insertAtPosition(head,3, 100);
+//     insertAtPosition(head,3, 100);
 
-     display(head);
+//      display(head);
 
-     updateNode(head, 50, 500);
+//      updateNode(head, 50, 500);
 
-     display(head);
-    //  updateNode(head, 150, 1500);
+//      display(head);
+//     //  updateNode(head, 150, 1500);
 
-    //  display(head);
+//     //  display(head);
 
-    deleteNode(head, 5500);
+//     deleteNode(head, 5500);
 
-    display(head);
-}
+//     display(head);
+// }
+
+
+
+// #include <iostream>
+// #include <stack>
+// using namespace std;
+
+// int main() {
+//     stack<int> s;
+
+//     // Push elements onto the stack
+//     s.push(10);
+//     s.push(20);
+//     s.push(30);
+//     s.push(40);
+//     s.push(50);
+//     s.push(60);
+//     s.push(70);
+
+//     // Display the top element
+//     cout << "Top element is: " << s.top() << endl;
+
+//     // Pop an element from the stack
+//     s.pop();
+
+//     // Display the top element again
+//     cout << "After pop, top element is: " << s.top() << endl;
+
+//     // Check if the stack is empty
+//     if (s.empty()) {
+//         cout << "Stack is empty." << endl;
+//     } else {
+//         cout << "Stack is not empty." << endl;
+//     }
+
+//     // Display the size of the stack
+//     cout << "Stack size is: " << s.size() << endl;
+
+// cout<<"Element Present in stack : ";
+//     while(s.size()>0){
+//         cout<<s.top()<<" ";
+//         s.pop();
+//     }
+
+//     return 0;
+// }
 
 
