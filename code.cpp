@@ -3629,3 +3629,195 @@
 // }
 
 
+//  stack : array
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Stack{
+//     public:
+//     int *arr;
+//     int capacity;
+//     int top;
+
+//     Stack(int size){
+//         arr = new int[size];
+//         capacity = size;
+//         top = -1;
+//     }
+
+// void push(int data){
+//     if(top == capacity-1){
+//         cout<<"Stack Overflow!"<<endl;
+//         return;
+//     }
+
+//     arr[++top] = data;
+// }
+
+// int pop(){
+//     if(top == -1){
+//         cout<<"Stack Underflow!"<<endl;
+//         return -1;
+//     }
+
+//     return arr[--top];
+// }
+
+// void display(){
+//     if(top == -1){
+//         cout<<"Stack Empty!"<<endl;
+//         return;
+//     }
+
+//     for(int i = top; i >= 0; i--){
+//         cout<<arr[i]<<" ";
+//     }
+//     cout<<endl;
+// }
+
+// void peek(){
+//    if(top == -1){
+//         cout<<"Stack Empty!"<<endl;
+//         return;
+//     }
+
+//     cout<<"Top element in stack : "<<arr[top]<<endl;
+    
+// }
+
+// };
+
+// int main(){
+
+//     Stack s(10);
+
+//     s.push(10);
+//     s.push(20);
+//     s.push(30);
+//     s.push(40);
+//     s.push(50);
+//     s.push(60);
+
+//     s.display();
+
+//     s.pop();
+
+//   s.display();
+
+//   s.peek();
+
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// class Node{
+//     public :
+//     int data;
+//     Node* next;
+
+//     Node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+// };
+
+// void push(Node* &top, int data){
+//     Node *newNode = new Node(data);
+
+//     newNode->next = top;
+
+//     top = newNode;
+// }
+
+// void pop(Node* &top){
+//     if(top == NULL){
+//         cout<<"Stack Underflow!"<<endl;
+//         return;
+//     }
+
+//     Node* temp = top;
+   
+//    top = top->next;
+
+//    cout<<temp->data<<" deleted from stack!"<<endl;
+
+//    delete temp;
+// }
+
+
+// void display(Node* &top){
+//     if(top == NULL){
+//         cout<<"Stack Empty!"<<endl;
+//         return;
+//     }
+
+//     Node *temp = top;
+
+//     while(temp != NULL){
+//         cout<<temp->data<<"->";
+//         temp = temp->next;
+//     }
+//     cout<<"NULL"<<endl;
+// }
+
+// int main(){
+//     Node *top = NULL;
+
+//     push(top,10);
+//     push(top,20);
+//     push(top,30);
+//     push(top,40);
+
+
+//     display(top);
+
+//     pop(top);
+
+//     display(top);
+
+
+// }
+
+// Queue : using stl
+
+
+// #include<iostream>
+// #include<queue>
+// using namespace std;
+
+// int main(){
+//     queue<int>q;
+
+//     q.push(10);
+//     q.push(20);
+//     q.push(30);
+//     q.push(40);
+//     q.push(50);
+//     q.push(60);
+
+//     cout<<"Start element in queue : "<<q.front()<<endl;
+
+//     cout<<"End element in queue : "<<q.back()<<endl;
+
+
+//     q.pop();
+
+//     cout<<"Start element in queue : "<<q.front()<<endl;
+//     cout<<"Size of queue : "<<q.size()<<endl;
+//     cout<<"queue is empty or not : "<<q.empty()<<endl;
+
+//     while(q.size() > 0){
+//         cout<<q.front()<<" ";
+//         q.pop();
+//     }
+// cout<<endl;
+//  cout<<"Size of queue : "<<q.size()<<endl;
+
+// }
+
