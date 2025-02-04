@@ -3821,3 +3821,43 @@
 
 // }
 
+
+
+#include<iostream>
+using namespace std;
+
+int binarySearch(int arr[], int size, int key){
+
+    int start = 0;
+    int end = size - 1;
+
+while(start < end){
+
+int mid = start + (end-start)/2;
+
+if(key == arr[mid]){
+    return mid;
+}
+else if(key < arr[mid]){
+    end = mid - 1;
+}
+else{
+    start  = mid + 1;
+}
+
+
+}
+
+}
+
+int main(){
+    int n = 10;
+
+    int key = 50;
+    int arr[n] = {10,20,30,40,50,60,70,80,90,100};
+
+  int findindex = binarySearch(arr,n,key);
+
+  cout<<key<<" Present at index : "<<findindex<<endl;
+
+}
