@@ -3823,41 +3823,108 @@
 
 
 
+// #include<iostream>
+// using namespace std;
+
+// int binarySearch(int arr[], int size, int key){
+
+//     int start = 0;
+//     int end = size - 1;
+
+// while(start < end){
+
+// int mid = start + (end-start)/2;
+
+// if(key == arr[mid]){
+//     return mid;
+// }
+// else if(key < arr[mid]){
+//     end = mid - 1;
+// }
+// else{
+//     start  = mid + 1;
+// }
+
+
+// }
+
+// }
+
+// int main(){
+//     int n = 10;
+
+//     int key = 50;
+//     int arr[n] = {10,20,30,40,50,60,70,80,90,100};
+
+//   int findindex = binarySearch(arr,n,key);
+
+//   cout<<key<<" Present at index : "<<findindex<<endl;
+
+// }
+
+// bubble sort
+
+// #include<iostream>
+// using namespace std;
+
+// void bubbleSort(int arr[], int size){
+
+//     for(int i = 0; i < size; i++){
+
+//         for(int j = 0; j < size-i-1; j++){
+
+//             if(arr[j+1]<arr[j]){
+//                 swap(arr[j+1],arr[j]);
+//             }
+//         }
+//     }
+
+// }
+
+// int main(){
+//     int n = 6;
+
+//     int arr[n] = {12,34,45,87,23,57};
+
+//     bubbleSort(arr,n);
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+
+
+// }
+
+
+//  Insersion sort
+
 #include<iostream>
 using namespace std;
 
-int binarySearch(int arr[], int size, int key){
+void insertionSort(int arr[], int n){
 
-    int start = 0;
-    int end = size - 1;
+    for(int i = 0; i < n; i++){
+        int current = arr[i];
+       int previous = i-1;
 
-while(start < end){
+       while(previous >= 0 && arr[previous] > current){
+            arr[previous+1] = arr[previous];
+            previous--;
+       }
 
-int mid = start + (end-start)/2;
-
-if(key == arr[mid]){
-    return mid;
-}
-else if(key < arr[mid]){
-    end = mid - 1;
-}
-else{
-    start  = mid + 1;
-}
-
-
-}
+       arr[previous + 1] = current;
+    }
 
 }
 
 int main(){
-    int n = 10;
+    int n = 6;
 
-    int key = 50;
-    int arr[n] = {10,20,30,40,50,60,70,80,90,100};
+    int arr[n] = {12,34,45,87,23,57};
 
-  int findindex = binarySearch(arr,n,key);
+    insertionSort(arr,n);
 
-  cout<<key<<" Present at index : "<<findindex<<endl;
-
+    for(int i = 0; i < n; i++){
+        cout<<arr[i]<<" ";
+    }
 }
