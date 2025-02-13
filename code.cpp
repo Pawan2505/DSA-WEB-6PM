@@ -3898,33 +3898,153 @@
 
 //  Insersion sort
 
+// #include<iostream>
+// using namespace std;
+
+// void insertionSort(int arr[], int n){
+
+//     for(int i = 0; i < n; i++){
+//         int current = arr[i];
+//        int previous = i-1;
+
+//        while(previous >= 0 && arr[previous] > current){
+//             arr[previous+1] = arr[previous];
+//             previous--;
+//        }
+
+//        arr[previous + 1] = current;
+//     }
+
+// }
+
+// int main(){
+//     int n = 6;
+
+//     int arr[n] = {12,34,45,87,23,57};
+
+//     insertionSort(arr,n);
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+// Selection Sort
+
+// #include<iostream>
+// using namespace std;
+
+// void selectionSort(int arr[], int n){
+
+//     for(int i = 0; i <n; i++){
+
+//         int curr = i;
+
+//         for(int j = i+1; j < n; j++){
+
+//             if(arr[j] < arr[curr]){
+//                 curr = j;
+//             }
+//         }
+
+//         swap(arr[curr], arr[i]);
+//     }
+// }
+
+// int main(){
+
+//     int n = 7;
+
+//     int arr[n] = {5,8,2,7,6,10,3};
+
+//     selectionSort(arr,n);
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
+
+
+//  Merge Sort 
+
 #include<iostream>
 using namespace std;
 
-void insertionSort(int arr[], int n){
 
-    for(int i = 0; i < n; i++){
-        int current = arr[i];
-       int previous = i-1;
+void merge(int arr[], int start, int end){
 
-       while(previous >= 0 && arr[previous] > current){
-            arr[previous+1] = arr[previous];
-            previous--;
-       }
+    int mid = start + (end-start)/2;
 
-       arr[previous + 1] = current;
+    int length1 = mid - start+1;
+
+    int length2 = end - mid;
+
+    int *first = new int[length1];
+
+    int *second = new int[length2];
+
+    int originalIndex = start;
+
+    for(int i = 0; i < length1; i++){
+        first[i] = arr[originalIndex++];
     }
 
+    originalIndex = mid+1;
+    for(int i = 0; i < length2; i++){
+        second[i] = arr[originalIndex++];
+    }
+
+int index1 = 0;
+int index2 = 0;
+
+originalIndex = start;
+
+while(index1 < length1 && index2 < length2){
+
+    if(first[index1]<second[index2]){
+
+        arr[originalIndex++] = first[index1++];
+    }else{
+        arr[originalIndex++] = second[index2++];
+    }
+}
+
+while(index1 < length1){
+    arr[originalIndex++] = first[index1++];
+}
+
+
+while(index2<length2){
+    arr[originalIndex++] = second[index2++];
+}
+
+}
+
+
+void mergeSort(int arr[], int start, int end){
+    if(start>=end){
+        return;
+    }
+
+    int mid = start + (end-start)/2;
+
+    mergeSort(arr, start, mid);
+    mergeSort(arr,mid+1,end);
+
+    merge(arr, start, end);
 }
 
 int main(){
-    int n = 6;
+    int n = 7;
+    int arr[n] = {5,8,2,7,6,10,3};
+    mergeSort(arr,0,6);
 
-    int arr[n] = {12,34,45,87,23,57};
-
-    insertionSort(arr,n);
-
-    for(int i = 0; i < n; i++){
+    for(int i =0; i < n; i++){
         cout<<arr[i]<<" ";
     }
 }
+
+
+
+// https://docs.google.com/document/d/1JVggzHjbC5wMi_SgU7AHjE-5SrfmiQAPq1sc2bKdP-g/edit?tab=t.0
