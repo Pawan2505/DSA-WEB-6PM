@@ -3968,83 +3968,153 @@
 
 //  Merge Sort 
 
-#include<iostream>
-using namespace std;
+// #include<iostream>
+// using namespace std;
 
 
-void merge(int arr[], int start, int end){
+// void merge(int arr[], int start, int end){
 
-    int mid = start + (end-start)/2;
+//     int mid = start + (end-start)/2;
 
-    int length1 = mid - start+1;
+//     int length1 = mid - start+1;
 
-    int length2 = end - mid;
+//     int length2 = end - mid;
 
-    int *first = new int[length1];
+//     int *first = new int[length1];
 
-    int *second = new int[length2];
+//     int *second = new int[length2];
 
-    int originalIndex = start;
+//     int originalIndex = start;
 
-    for(int i = 0; i < length1; i++){
-        first[i] = arr[originalIndex++];
-    }
+//     for(int i = 0; i < length1; i++){
+//         first[i] = arr[originalIndex++];
+//     }
 
-    originalIndex = mid+1;
-    for(int i = 0; i < length2; i++){
-        second[i] = arr[originalIndex++];
-    }
+//     originalIndex = mid+1;
+//     for(int i = 0; i < length2; i++){
+//         second[i] = arr[originalIndex++];
+//     }
 
-int index1 = 0;
-int index2 = 0;
+// int index1 = 0;
+// int index2 = 0;
 
-originalIndex = start;
+// originalIndex = start;
 
-while(index1 < length1 && index2 < length2){
+// while(index1 < length1 && index2 < length2){
 
-    if(first[index1]<second[index2]){
+//     if(first[index1]<second[index2]){
 
-        arr[originalIndex++] = first[index1++];
-    }else{
-        arr[originalIndex++] = second[index2++];
-    }
-}
+//         arr[originalIndex++] = first[index1++];
+//     }else{
+//         arr[originalIndex++] = second[index2++];
+//     }
+// }
 
-while(index1 < length1){
-    arr[originalIndex++] = first[index1++];
-}
-
-
-while(index2<length2){
-    arr[originalIndex++] = second[index2++];
-}
-
-}
+// while(index1 < length1){
+//     arr[originalIndex++] = first[index1++];
+// }
 
 
-void mergeSort(int arr[], int start, int end){
-    if(start>=end){
-        return;
-    }
+// while(index2<length2){
+//     arr[originalIndex++] = second[index2++];
+// }
 
-    int mid = start + (end-start)/2;
+// }
 
-    mergeSort(arr, start, mid);
-    mergeSort(arr,mid+1,end);
 
-    merge(arr, start, end);
-}
+// void mergeSort(int arr[], int start, int end){
+//     if(start>=end){
+//         return;
+//     }
 
-int main(){
-    int n = 7;
-    int arr[n] = {5,8,2,7,6,10,3};
-    mergeSort(arr,0,6);
+//     int mid = start + (end-start)/2;
 
-    for(int i =0; i < n; i++){
-        cout<<arr[i]<<" ";
-    }
-}
+//     mergeSort(arr, start, mid);
+//     mergeSort(arr,mid+1,end);
+
+//     merge(arr, start, end);
+// }
+
+// int main(){
+//     int n = 7;
+//     int arr[n] = {5,8,2,7,6,10,3};
+//     mergeSort(arr,0,6);
+
+//     for(int i =0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
 
 
 
 // https://docs.google.com/document/d/1JVggzHjbC5wMi_SgU7AHjE-5SrfmiQAPq1sc2bKdP-g/edit?tab=t.0
+
+
+
+
+// #include<iostream>
+// using namespace std;
+
+// int partition(int arr[], int start, int end){
+
+//     int pivot = arr[start];
+//     int count = 0;
+
+//     for(int i = start+1; i <=end; i++){
+//         if(arr[i] <= pivot){
+//             count++;
+//         }
+//     }
+
+//     int pi = start+count;
+
+//     swap(arr[start],arr[pi]);
+
+//     int i = 0;
+//     int j = end;
+
+//     while(i < pi && j > pi){
+//         while(arr[i] <= arr[pi]){
+//             i++;
+//         }
+
+//         while(arr[j]> arr[pi]){
+//             j--;
+//         }
+
+//         if(i < pi && j > pi){
+//             swap(arr[i], arr[j]);
+//         }
+//     }
+
+//     return pi;
+// }
+
+
+// void quickSort(int arr[], int start, int end){
+//     //Base Condition
+
+//     if(start>=end){
+//         return;
+//     }
+
+//     int p = partition(arr, start, end);
+
+//     quickSort(arr, start, p-1);
+
+//     quickSort(arr, p+1, end);
+
+// }
+
+// int main(){
+//     int n = 6;
+
+//     int arr[n] = {12,34,65,6,78,3};
+
+//     quickSort(arr, 0, n-1);
+
+
+//     for(int i = 0; i < n; i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
